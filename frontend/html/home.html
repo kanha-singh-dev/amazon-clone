@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="/frontend/css/nav-bar.css">
     <link rel="stylesheet" href="/frontend/css/second-bar.css">
+    <script src="/frontend/script/sidebar.js"></script>
     <style>
         *{
             margin: 0px;
@@ -323,57 +324,5 @@
     </div>
         </div>
     </header>
-    <script>
-        const menuBtn = document.querySelector(".menu-btn");
-
-const sidebar = document.querySelector(".sidebar");
-
-const overlay = document.querySelector(".overlay");
-
-const closeBtn = document.querySelector(".close-btn");
-
-menuBtn.onclick = ()=>{
-
-    sidebar.classList.add("active");
-
-    overlay.classList.add("active");
-
-}
-
-closeBtn.onclick = ()=>{
-
-    sidebar.classList.remove("active");
-
-    overlay.classList.remove("active");
-
-}
-
-overlay.onclick = ()=>{
-
-    sidebar.classList.remove("active");
-
-    overlay.classList.remove("active");
-
-}
-const toggleBodyScroll = (disable) => {
-    if (disable) {
-        document.body.style.overflow = "hidden";
-    } else {
-        document.body.style.overflow = "auto";
-    }
-};
-menuBtn.onclick = () => {
-    sidebar.classList.add("active");
-    overlay.classList.add("active");
-    toggleBodyScroll(true); // FIX: Disable scroll when sidebar opens
-};
-const closeMenuHandler = () => {
-    sidebar.classList.remove("active");
-    overlay.classList.remove("active");
-    toggleBodyScroll(false); // FIX: Enable scroll when sidebar closes
-};
-closeBtn.onclick = closeMenuHandler;
-overlay.onclick = closeMenuHandler;
-    </script>
 </body>
 </html>
