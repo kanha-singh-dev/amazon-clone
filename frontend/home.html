@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>amazon clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        *{
+            margin: 0px;
+            box-shadow: 0px;
+        }
+        .nav-bar{
+            width: 100%;
+            height: 60px;
+            background-color: #131921;
+            position: relative;
+            display: flex;
+            z-index: 1;
+            overflow: visible;
+        }
+        .amazon-logo{
+            width: 130px;
+            height: 51px;
+            background-color: black;
+            padding: 1px 8px 0px 6px;
+            margin: 1px;
+            cursor: pointer;
+        }
+        .amazon-logo:hover{
+            border: 2px solid #ffffff;
+        }
+        .location{
+            width: 188px;
+            height: 51px;
+            margin: 5px 3px 5px 0px;
+            padding: 0px 9px;
+        }
+        .location:hover{
+            border: 2px solid #ffffff
+        }
+        .nav-line-1{
+            color: #cccccc;
+            font-size: 12px;
+            line-height: 14px;
+            height: 14px;
+            font-weight: 400;
+        }
+        .location{
+            display: flex;
+            cursor: pointer;
+        }
+        .location-img{
+            width: 15px;
+            height: 18px;
+            margin-top: 8px;
+        }
+        .loaction-1{
+            display: block;
+        }
+        .nav-line-2{
+            color: #cccccc;
+            font-size: 14px;
+            font-weight: 700px;
+            line-height: 15px;
+        }
+        .nav-search{
+            width: 786px;
+            height: 40px;
+            padding: 10px 4px 10px 3px;
+            display: flex;
+        }
+        #search{
+            width: 44px;
+            height: 38.400px;
+            padding-left: 8px;
+            border: 0.800 solid #cdcdcd;
+            font-size: 14px;
+            border-radius: 5px 0px 0px 5px;
+        }
+        #search-1{
+            width: 682px;
+            height: 38px;
+            padding: 7px 10px 10px 0px
+        }
+        .search-icon{
+            width: 45px;
+            height: 38px;
+            background-color: #ff6200;
+            border-radius: 0px 5px 5px 0px;
+            cursor: pointer;
+        }
+        .search-img-icon{
+            width: 35px;
+            height: 26px;
+            margin: 5px 0px 0px 5px;
+        }
+        .language-box{
+           position:relative;
+           display: flex;
+           flex-direction: row;
+           justify-content: center;
+           align-items: center;
+           z-index: 1000;
+           overflow: visible;
+        }
+        .language:hover{
+            border:2px solid #ffffff;
+        }
+        .language img{
+            width: 23px;
+            height: 17px;
+        }
+        .language-dropdown{
+           position:absolute;
+           top:50px;
+           right:0;
+           width:230px;
+           background:white;
+           border-radius:8px;
+           box-shadow:0 5px 15px rgba(0,0,0,.3);
+           
+           display:none;
+ 
+           padding:15px;
+           z-index: 999999;
+           overflow: visible;
+        }
+
+        .language-box:hover .language-dropdown{
+           display:block;
+        }
+
+        .language-dropdown label{
+           display:block;
+           margin:10px 0;
+           cursor:pointer;
+        }
+
+        .language-dropdown h4{
+           margin-bottom:10px;
+        }
+
+        .language-dropdown a{
+           text-decoration:none;
+        }
+        .account{
+           position:relative;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           margin-left: 5px;
+           overflow: visible;
+        }
+
+.account-dropdown{
+
+    width:500px;
+
+    background:white;
+
+    position:absolute;
+
+    top:55px;
+
+    right:0;
+
+    display:none;
+
+    border-radius:4px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.3);
+
+    z-index:999;
+    overflow: visible;
+
+}
+.account:hover .account-dropdown{
+    display:block;
+}
+.signin{
+
+    text-align:center;
+
+    padding:20px;
+
+}
+
+.signin button{
+
+    width:220px;
+
+    height:35px;
+
+    background:#FFD814;
+
+    border:none;
+
+    border-radius:20px;
+
+    cursor:pointer;
+
+}
+.dropdown-content{
+
+    display:flex;
+
+}
+.left,
+.right{
+
+    flex:1;
+
+    padding:20px;
+
+}
+
+.right{
+
+    border-left:1px solid #ddd;
+
+}
+.left a,
+.right a{
+
+    display:block;
+
+    text-decoration:none;
+
+    color:#444;
+
+    margin:10px 0;
+
+}
+
+.left a:hover,
+.right a:hover{
+
+    color:#ff9900;
+
+}
+.order{
+    width: 78px;
+    height: 51px;
+    margin: 10px 0px 0px 10px;
+}
+.order:hover{
+    border: 2px solid #ffffff;
+}
+.order a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.return{
+    font-size: 14px;
+    font-weight: 400;
+}
+.order-1{
+    font-size: 14px;
+    font-weight: 700;
+}
+.cart{
+    width: 85px;
+    height: 51px;
+}
+.cart:hover{
+    border: 2px solid #ffffff;
+}
+.cart img{
+    width: 80px;
+    height: 48px;
+}
+.second-nav-bar{
+    width: 100%;
+    height: 40px;
+    background-color: #0f1111;
+    display: flex;
+    z-index: 1;
+    overflow: visible;
+}
+/* Overlay */
+
+.overlay{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,.7);
+    display: none;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+/* Sidebar */
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: -365px;
+    width: 365px;
+    height: 100vh;
+    background: #fff;
+    overflow-y: auto;
+    transition: .35s ease;
+    z-index: 99999;
+}
+
+.sidebar.active{
+    left: 0;
+}
+
+.overlay.active{
+    display: block;
+    pointer-events: auto;
+}
+
+/* Header */
+
+.sidebar-header{
+    height: 50px;
+    background: #232f3e;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 0 20px;
+
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.sidebar-header i{
+    font-size: 28px;
+}
+
+.sidebar-header h2{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* Close Button */
+
+.close-btn{
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.close-btn i{
+    font-size: 24px;
+}
+
+/* Section */
+
+.menu-section{
+    padding: 15px 0;
+}
+
+/* Heading */
+
+.menu-section h3{
+    font-size: 22px;
+    font-weight: 700;
+    margin: 10px 20px 15px;
+}
+
+/* Menu Items */
+
+.menu-section a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    text-decoration: none;
+
+    color: #111;
+
+    font-size: 15px;
+
+    padding: 12px 20px;
+
+    transition: .2s;
+}
+
+/* Hover */
+
+.menu-section a:hover{
+    background: #eaeded;
+}
+
+/* Arrow */
+
+.menu-section a i{
+    color: #888;
+    font-size: 15px;
+}
+
+/* Divider */
+
+hr{
+    border: none;
+    border-top: 1px solid #ddd;
+}
+.menu-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:white;
+
+    cursor:pointer;
+
+    padding:10px 12px;
+
+    font-weight:700;
+    position: relative;
+    z-index: 100000;
+}
+
+.menu-btn:hover{
+
+    border:1px solid white;
+}
+
+.menu-btn i{
+
+    font-size:22px;
+}
+
+.menu-btn span{
+
+    font-size:18px;
+}
+.fresh{
+    width: 45px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 5px 0px 5px;
+}
+.fresh:hover{
+    border: 2px solid #ffffff;
+}
+.fresh a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.mx-player{
+    width: 74px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 5px 0px 5px;
+}
+.mx-player:hover{
+    border: 2px solid #ffffff;
+}
+.mx-player a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.sell{
+    width: 34px;
+    height: 40px;
+    padding: 0px 5px 0px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sell:hover{
+    border: 2px solid #ffffff;
+}
+.sell a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.bestseller{
+    width: 78px;
+    height: 40px;
+    padding: 0px 5px 0px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bestseller:hover{
+    border: 2px solid #ffffff;
+}
+.bestseller a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.today-deals{
+    width: 95px;
+    height: 40px;
+    padding: 0px 5px 0px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.today-deals:hover{
+    border: 2px solid #ffffff;
+}
+.today-deals a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.mobiles{
+    width: 60px;
+    height: 40px;
+    padding: 0px 5px 0px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mobiles:hover{
+    border: 2px solid #ffffff;
+}
+.mobiles a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.new-releases{
+    width: 97px;
+    height: 40px;
+    padding: 0px 5px 0px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.new-releases:hover{
+    border: 2px solid #ffffff;
+}
+.new-releases a{
+    text-decoration: none;
+    color: #fff;
+}
+.prime{
+
+    display:flex;
+    align-items:center;
+
+    cursor:pointer;
+}
+
+.prime>a{
+    color:white;
+    text-decoration:none;
+    font-size:15px;
+}
+
+.prime i{
+    color:#9a9a9a;
+    font-size:11px;
+    margin-left:4px;
+}
+
+.prime-dropdown{
+
+    top:100%;
+
+    left:-10px;
+
+    width:420px;
+
+    display:none;
+
+    background:#fff;
+
+    border-radius:4px;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.3);
+
+    z-index:99999;
+
+    margin-top:8px;
+
+    z-index: 1;
+
+}
+
+.prime-dropdown img{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:4px;
+}
+
+.prime:hover .prime-dropdown{
+
+    display:block;
+}.prime-dropdown::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-10px;
+
+    left:25px;
+
+    border-left:10px solid transparent;
+
+    border-right:10px solid transparent;
+
+    border-bottom:10px solid white;
+
+}
+.amazon-pay{
+    width: 89px;
+    height: 40px;
+    padding: 0px 5px 0px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.amazon-pay:hover{
+    border: 2px solid #ffffff;
+}
+.amazon-pay a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.electronics{
+    width: 79px;
+    height: 40px;
+    padding: 0px 5px 0px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.electronics:hover{
+    border: 2px solid #ffffff;
+}
+.electronics a{
+    text-decoration: none;
+    color: #ffffff;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-bar">
+            <div class="logo">
+                <img src="/image/amazon-logo.png" alt="" srcset="" class="amazon-logo">
+            </div>
+            <div class="location">
+                <img src="/image/location.png" alt="" srcset="" class="location-img">
+                <div class="location-1">
+                    <span class="nav-line-1">Deliver to kanha</span><br>
+                    <span class="nav-line-2">Update location</span>
+                </div>
+            </div>
+            <div class="nav-search">
+                <select name="search" id="search">
+                    <option value="search"> All categories</option>
+                    <option value="search">Alexa skills </option>
+                    <option value="search">Amazon devices</option>
+                    <option value="search">Amazon fashion</option>
+                    <option value="search">Amazon fresh</option>
+                    <option value="search">Amazon Pharmacy</option>
+                    <option value="search">Applinces</option>
+                    <option value="search">Apps & Games</option>
+                    <option value="search">Audiable audiobook</option>
+                    <option value="search">Baby</option>
+                    <option value="search">Beauty</option>
+                    <option value="search">Books</option>
+                    <option value="search">Car & Motorbike</option>
+                </select>
+                <input type="search" name="search" id="search-1" placeholder="Search Amazon.in">
+                <div class="search-icon">
+                    <img src="/image/search.png" alt="" srcset="" class="search-img-icon">
+                </div>
+            </div>
+                <div class="language-box">
+                    <div class="language">
+                        <img src="/image/indain flag.jpeg" alt="">
+                        <span style="color: white;">EN</span>
+                        <i class="fa-solid fa-caret-down" style="color: white;"></i>
+                    </div>
+
+                    <div class="language-dropdown">
+                       <h4>Change language</h4>
+
+                       <label><input type="radio" name="lang"> English - EN</label>
+                       <label><input type="radio" name="lang"> हिन्दी - HI</label>
+                       <label><input type="radio" name="lang"> தமிழ் - TA</label>
+                       <label><input type="radio" name="lang"> తెలుగు - TE</label>
+                       <label><input type="radio" name="lang"> ಕನ್ನಡ - KN</label>
+
+                       <hr>
+
+                       <a href="#">Learn more</a>
+                    </div>
+            </div>
+            <div class="account">
+
+                <div class="account-btn" style="color: white;">
+                    <span>Hello, sign in</span>
+                    <h4>Account & Lists <i class="fa-solid fa-caret-down"></i></h4>
+                </div>
+
+                <div class="account-dropdown">
+
+                <div class="signin">
+                    <button>Sign in</button>
+
+                    <p>
+                     New customer?
+                    <a href="#">Start here.</a>
+                    </p>
+                </div>
+
+                <hr>
+  
+                <div class="dropdown-content">
+
+                   <div class="left">
+                        <h3>Your Lists</h3>
+
+                        <a href="">Create a Wish List</a>
+
+                        <a href="">Wish from Any Website</a>
+
+                        <a href="">Baby Wishlist</a>
+
+                    </div>
+
+                    <div class="right">
+
+                        <h3>Your Account</h3>
+
+                        <a href="">Your Orders</a>
+
+                        <a href="">Your Wishlist</a>
+
+                        <a href="">Prime Membership</a>
+
+                        <a href="">Manage Content</a>
+
+                    </div>
+
+                </div>
+
+                </div>
+
+            </div>
+            <div class="order">
+                <span class="return"><a href="#">Returns</a></span><br>
+                <span class="order-1"><a href="#">& Orders</a></span>
+            </div>
+            <div class="cart">
+                <img src="/image/cart.png" alt="cart image" srcset="">
+            </div>
+        </div>
+        <div class="second-nav-bar">
+<!-- Hamburger Button -->
+        <div class="menu-btn">
+            <i class="fa-solid fa-bars"></i>
+            <span>All</span>
+        </div>
+
+<!-- Overlay -->
+        <div class="overlay"></div>
+
+<!-- Sidebar -->
+        <div class="sidebar">
+
+<!-- Header -->
+        <div class="sidebar-header">
+            <i class="fa-solid fa-circle-user"></i>
+            <h2>Hello, sign in</h2>
+
+            <span class="close-btn">
+               <i class="fa-solid fa-xmark"></i>
+            </span>
+        </div>
+
+<!-- Trending -->
+        <div class="menu-section">
+
+            <h3>Trending</h3>
+
+            <a href="#">Best Sellers</a>
+
+            <a href="#">New Releases</a>
+
+        </div>
+
+        <hr>
+
+<!-- Digital Content -->
+        <div class="menu-section">
+
+            <h3>Digital Content and Devices</h3>
+
+            <a href="#">
+                Echo & Alexa
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+
+            <a href="#">
+                Fire TV
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+
+            <a href="#">
+                Kindle E-Readers & eBooks
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+
+            <a href="#">
+                Audible Audiobooks
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+
+            <a href="#">
+                Amazon Prime Video
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+
+            <a href="#">
+                Amazon Music
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+
+        </div>
+
+        <hr>
+
+<!-- Shop by Category -->
+
+        <div class="menu-section">
+
+            <h3>Shop by Category</h3>
+
+            <a href="#">
+                Mobiles, Computers
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+
+            <a href="#">
+                TV, Appliances, Electronics
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+
+            <a href="#">
+                Men's Fashion
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+
+            <a href="#">
+                Women's Fashion
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+
+            <a href="#">
+                See all
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+        </div>
+
+        <hr>
+
+<!-- Programs -->
+
+        <div class="menu-section">
+
+            <h3>Programs & Features</h3>
+
+            <a href="#">
+                Gift Cards & Mobile Recharges
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+
+            <a href="#">Amazon Launchpad</a>
+
+            <a href="#">Amazon Business</a>
+
+            <a href="#">Handloom and Handicrafts</a>
+
+            <a href="#">
+                See all
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+
+        </div>
+
+        <hr>
+
+<!-- Help -->
+
+        <div class="menu-section">
+
+            <h3>Help & Settings</h3>
+
+            <a href="#">Your Account</a>
+
+            <a href="#">Customer Service</a>
+
+            <a href="#">Sign in</a>
+
+        </div>
+
+    </div>
+    <div class="fresh">
+        <a href="#">Fresh</a>
+    </div>
+    <div class="mx-player">
+        <a href="#">MX Player</a>
+    </div>
+    <div class="sell">
+        <a href="#">Sell</a>
+    </div>
+    <div class="bestseller">
+        <a href="#">Bestseller</a>
+    </div>
+    <div class="today-deals">
+        <a href="#">Today's Deals</a>
+    </div>
+    <div class="mobiles">
+        <a href="#">Mobiles</a>
+    </div>
+    <div class="new-releases">
+        <a href="#">New Releases</a>
+    </div>
+    <li class="nav-item prime">
+
+        <a href="#">Prime</a>
+
+        <i class="fa-solid fa-caret-down"></i>
+
+        <div class="prime-dropdown">
+            <h1>prime day sell</h1>
+
+            <img src="image/prime-banner.jpg" alt="Prime">
+
+        </div>
+
+    </li>
+    <div class="amazon-pay">
+        <a href="#">Amazon Pay</a>
+    </div>
+    <div class="electronics">
+        <a href="#">Electronics</a>
+    </div>
+        </div>
+    </header>
+    <script>
+        const menuBtn = document.querySelector(".menu-btn");
+
+const sidebar = document.querySelector(".sidebar");
+
+const overlay = document.querySelector(".overlay");
+
+const closeBtn = document.querySelector(".close-btn");
+
+menuBtn.onclick = ()=>{
+
+    sidebar.classList.add("active");
+
+    overlay.classList.add("active");
+
+}
+
+closeBtn.onclick = ()=>{
+
+    sidebar.classList.remove("active");
+
+    overlay.classList.remove("active");
+
+}
+
+overlay.onclick = ()=>{
+
+    sidebar.classList.remove("active");
+
+    overlay.classList.remove("active");
+
+}
+const toggleBodyScroll = (disable) => {
+    if (disable) {
+        document.body.style.overflow = "hidden";
+    } else {
+        document.body.style.overflow = "auto";
+    }
+};
+menuBtn.onclick = () => {
+    sidebar.classList.add("active");
+    overlay.classList.add("active");
+    toggleBodyScroll(true); // FIX: Disable scroll when sidebar opens
+};
+const closeMenuHandler = () => {
+    sidebar.classList.remove("active");
+    overlay.classList.remove("active");
+    toggleBodyScroll(false); // FIX: Enable scroll when sidebar closes
+};
+closeBtn.onclick = closeMenuHandler;
+overlay.onclick = closeMenuHandler;
+    </script>
+</body>
+</html>
