@@ -403,3 +403,18 @@ hr{
     text-decoration: none;
     color: #ffffff;
 }
+.fashion{
+    width: 59px;
+    height: 40px;
+    padding: 0px 5px 0px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fashion:hover{
+    border: 2px solid #ffffff;
+}
+.fashion a{
+    text-decoration: none;
+    color: #ffffff;
+}
