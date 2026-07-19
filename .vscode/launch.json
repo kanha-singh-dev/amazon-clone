@@ -1,0 +1,17 @@
+{
+    "configurations": [
+        {
+            "name": "Launch Edge",
+            "request": "launch",
+            "type": "msedge",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "type": "msedge",
+            "name": "http://127.0.0.1:3000/frontend/html/home.html",
+            "request": "launch",
+            "url": "http://127.0.0.1:3000/frontend/html/home.html"
+        }
+    ]
+}
