@@ -433,3 +433,18 @@ hr{
     text-decoration: none;
     color: #ffffff;
 }
+.toy-games{
+    width: 100px;
+    height: 40px;
+    padding: 0px 5px 0px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.toy-games:hover{
+    border: 2px solid #ffffff;
+}
+.toy-games a{
+    text-decoration: none;
+    color: #ffffff;
+}
