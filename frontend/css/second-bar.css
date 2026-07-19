@@ -388,3 +388,18 @@ hr{
 .customer-servies:hover{
     border: 2px solid #ffffff;
 }
+.home-kitchen{
+    width: 114px;
+    height: 40px;
+    padding: 0px 5px 0px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home-kitchen:hover{
+    border: 2px solid #ffffff;
+}
+.home-kitchen a{
+    text-decoration: none;
+    color: #ffffff;
+}
