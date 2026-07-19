@@ -373,3 +373,18 @@ hr{
     text-decoration: none;
     color: #ffffff;
 }
+.customer-servies{
+    width: 121px;
+    height: 40px;
+    padding: 0px 5px 0px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.customer-servies a{
+    text-decoration: none;
+    color:  #ffffff;
+}
+.customer-servies:hover{
+    border: 2px solid #ffffff;
+}
