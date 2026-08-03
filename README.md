@@ -40,7 +40,7 @@ amazon-clone/
 ├── css/
 │   ├── navbar.css
 │   ├── sidebar.css
-│   ├── hero.css
+│   ├── hero-image-slider.css
 │   ├── product.css
 │   └── footer.css
 │

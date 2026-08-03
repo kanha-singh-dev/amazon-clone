@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="/frontend/css/nav-bar.css">
     <link rel="stylesheet" href="/frontend/css/second-bar.css">
+    <link rel="stylesheet" href="/frontend/css/hero-image-slider.css">
     <script src="/frontend/script/sidebar.js"></script>
+    <!-- defer waits for the hero markup before the slider script queries it. -->
+    <script src="/frontend/script/hero-image-slider.js" defer></script>
     <style>
         *{
             margin: 0px;
@@ -132,212 +135,239 @@
         </div>
         <div class="second-nav-bar">
 <!-- Hamburger Button -->
-        <div class="menu-btn">
-            <i class="fa-solid fa-bars"></i>
-            <span>All</span>
-        </div>
+            <div class="menu-btn">
+                <i class="fa-solid fa-bars"></i>
+                <span>All</span>
+            </div>
 
 <!-- Overlay -->
-        <div class="overlay"></div>
+            <div class="overlay"></div>
 
 <!-- Sidebar -->
-        <div class="sidebar">
+            <div class="sidebar">
 
 <!-- Header -->
-        <div class="sidebar-header">
-            <i class="fa-solid fa-circle-user"></i>
-            <h2>Hello, sign in</h2>
+            <div class="sidebar-header">
+                <i class="fa-solid fa-circle-user"></i>
+                <h2>Hello, sign in</h2>
 
-            <span class="close-btn">
-               <i class="fa-solid fa-xmark"></i>
-            </span>
-        </div>
+                <span class="close-btn">
+                   <i class="fa-solid fa-xmark"></i>
+                </span>
+            </div>
 
 <!-- Trending -->
-        <div class="menu-section">
+            <div class="menu-section">
 
-            <h3>Trending</h3>
+                <h3>Trending</h3>
 
-            <a href="#">Best Sellers</a>
+                <a href="#">Best Sellers</a>
 
-            <a href="#">New Releases</a>
+                <a href="#">New Releases</a>
 
-        </div>
+            </div>
 
-        <hr>
+            <hr>
 
 <!-- Digital Content -->
-        <div class="menu-section">
+            <div class="menu-section">
 
-            <h3>Digital Content and Devices</h3>
+                <h3>Digital Content and Devices</h3>
 
-            <a href="#">
-                Echo & Alexa
-                <i class="fa-solid fa-chevron-right"></i>
-            </a>
+                <a href="#">
+                    Echo & Alexa
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
 
-            <a href="#">
-                Fire TV
-                <i class="fa-solid fa-chevron-right"></i>
-            </a>
+                <a href="#">
+                    Fire TV
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
 
-            <a href="#">
-                Kindle E-Readers & eBooks
-                <i class="fa-solid fa-chevron-right"></i>
-            </a>
+                <a href="#">
+                    Kindle E-Readers & eBooks
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
 
-            <a href="#">
-                Audible Audiobooks
-                <i class="fa-solid fa-chevron-right"></i>
-            </a>
+                <a href="#">
+                    Audible Audiobooks
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
 
-            <a href="#">
-                Amazon Prime Video
-                <i class="fa-solid fa-chevron-right"></i>
-            </a>
+                <a href="#">
+                    Amazon Prime Video
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
 
-            <a href="#">
-                Amazon Music
-                <i class="fa-solid fa-chevron-right"></i>
-            </a>
+                <a href="#">
+                    Amazon Music
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
 
-        </div>
+            </div>
 
-        <hr>
+            <hr>
 
 <!-- Shop by Category -->
 
-        <div class="menu-section">
+            <div class="menu-section">
 
-            <h3>Shop by Category</h3>
+                <h3>Shop by Category</h3>
 
-            <a href="#">
-                Mobiles, Computers
-                <i class="fa-solid fa-chevron-right"></i>
-            </a>
+                <a href="#">
+                    Mobiles, Computers
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
 
-            <a href="#">
-                TV, Appliances, Electronics
-                <i class="fa-solid fa-chevron-right"></i>
-            </a>
+                <a href="#">
+                    TV, Appliances, Electronics
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
 
-            <a href="#">
-                Men's Fashion
-                <i class="fa-solid fa-chevron-right"></i>
-            </a>
+                <a href="#">
+                    Men's Fashion
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
 
-            <a href="#">
-                Women's Fashion
-                <i class="fa-solid fa-chevron-right"></i>
-            </a>
+                <a href="#">
+                    Women's Fashion
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
 
-            <a href="#">
-                See all
-                <i class="fa-solid fa-chevron-down"></i>
-            </a>
+                <a href="#">
+                    See all
+                    <i class="fa-solid fa-chevron-down"></i>
+                </a>
 
-        </div>
+            </div>
 
-        <hr>
+            <hr>
 
 <!-- Programs -->
 
-        <div class="menu-section">
+            <div class="menu-section">
 
-            <h3>Programs & Features</h3>
+                <h3>Programs & Features</h3>
 
-            <a href="#">
-                Gift Cards & Mobile Recharges
-                <i class="fa-solid fa-chevron-right"></i>
-            </a>
+                <a href="#">
+                    Gift Cards & Mobile Recharges
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
 
-            <a href="#">Amazon Launchpad</a>
+                <a href="#">Amazon Launchpad</a>
 
-            <a href="#">Amazon Business</a>
+                <a href="#">Amazon Business</a>
 
-            <a href="#">Handloom and Handicrafts</a>
+                <a href="#">Handloom and Handicrafts</a>
 
-            <a href="#">
-                See all
-                <i class="fa-solid fa-chevron-down"></i>
-            </a>
+                <a href="#">
+                    See all
+                    <i class="fa-solid fa-chevron-down"></i>
+                </a>
 
-        </div>
+            </div>
 
-        <hr>
+            <hr>
 
 <!-- Help -->
 
-        <div class="menu-section">
+            <div class="menu-section">
 
-            <h3>Help & Settings</h3>
+                <h3>Help & Settings</h3>
 
-            <a href="#">Your Account</a>
+                <a href="#">Your Account</a>
 
-            <a href="#">Customer Service</a>
+                <a href="#">Customer Service</a>
 
-            <a href="#">Sign in</a>
+                <a href="#">Sign in</a>
 
-        </div>
-
-    </div>
-    <div class="fresh">
-        <a href="#">Fresh</a>
-    </div>
-    <div class="mx-player">
-        <a href="#">MX Player</a>
-    </div>
-    <div class="sell">
-        <a href="#">Sell</a>
-    </div>
-    <div class="bestseller">
-        <a href="#">Bestseller</a>
-    </div>
-    <div class="today-deals">
-        <a href="#">Today's Deals</a>
-    </div>
-    <div class="mobiles">
-        <a href="#">Mobiles</a>
-    </div>
-    <div class="new-releases">
-        <a href="#">New Releases</a>
-    </div>
-    <li class="nav-item prime">
-
-        <a href="#">Prime</a>
-
-        <i class="fa-solid fa-caret-down"></i>
-
-        <div class="prime-dropdown">
-            <h1>prime day sell</h1>
-
-            <img src="image/prime-banner.jpg" alt="Prime">
+            </div>
 
         </div>
-
-    </li>
-    <div class="amazon-pay">
-        <a href="#">Amazon Pay</a>
-    </div>
-    <div class="electronics">
-        <a href="#">Electronics</a>
-    </div>
-    <div class="customer-servies">
-        <a href="#">Customer Servies</a>
-    </div>
-    <div class="home-kitchen">
-        <a href="#">Home & Kitchen</a>
-    </div>
-    <div class="fashion">
-        <a href="#">Fashion</a>
-    </div>
-    <div class="computer">
-        <a href="#">Computers</a>
-    </div>
-    <div class="toy-games">
-        <a href="#">Toy & Games</a>
-    </div>
+        <div class="fresh">
+            <a href="#">Fresh</a>
         </div>
+        <div class="mx-player">
+            <a href="#">MX Player</a>
+        </div>
+        <div class="sell">
+            <a href="#">Sell</a>
+        </div>
+        <div class="bestseller">
+            <a href="#">Bestseller</a>
+        </div>
+        <div class="today-deals">
+            <a href="#">Today's Deals</a>
+        </div>
+        <div class="mobiles">
+            <a href="#">Mobiles</a>
+        </div>
+        <div class="new-releases">
+            <a href="#">New Releases</a>
+        </div>
+        <li class="nav-item prime">
+
+            <a href="#">Prime</a>
+
+            <i class="fa-solid fa-caret-down"></i>
+
+            <div class="prime-dropdown">
+                <h1>prime day sell</h1>
+
+                <img src="image/prime-banner.jpg" alt="Prime">
+
+            </div>
+
+        </li>
+        <div class="amazon-pay">
+            <a href="#">Amazon Pay</a>
+        </div>
+        <div class="electronics">
+            <a href="#">Electronics</a>
+        </div>
+        <div class="customer-servies">
+            <a href="#">Customer Servies</a>
+        </div>
+        <div class="home-kitchen">
+            <a href="#">Home & Kitchen</a>
+        </div>
+        <div class="fashion">
+            <a href="#">Fashion</a>
+        </div>
+        <div class="computer">
+            <a href="#">Computers</a>
+        </div>
+        <div class="toy-games">
+            <a href="#">Toy & Games</a>
+        </div>
+    </div>
+
+    <!-- Native slider markup: every .slide occupies one full track width. -->
+    <section class="hero-slider" aria-label="Featured offers">
+        <div class="slides">
+            <div class="slide">
+                <img src="/image/slider1.jpg" alt="Featured Amazon offer" fetchpriority="high">
+            </div>
+            <div class="slide">
+                <img src="/image/slider2.jpg" alt="Featured Amazon offer" loading="lazy">
+            </div>
+            <div class="slide">
+                <img src="/image/slider3.jpg" alt="Featured Amazon offer" loading="lazy">
+            </div>
+            <div class="slide">
+                <img src="/image/slider4.jpg" alt="Featured Amazon offer" loading="lazy">
+            </div>
+        </div>
+
+        <!-- Buttons remain inside the slider so they can overlay its edges. -->
+        <button class="slider-control slider-control--previous" id="prev" type="button" aria-label="Previous slide">
+            <span aria-hidden="true">&#10094;</span>
+        </button>
+        <button class="slider-control slider-control--next" id="next" type="button" aria-label="Next slide">
+            <span aria-hidden="true">&#10095;</span>
+        </button>
+    </section>
+
     </header>
 </body>
 </html>

@@ -1,0 +1,69 @@
+.hero-slider{
+    position:relative;
+    width:100%;
+    height:clamp(220px, 40vw, 600px);
+    overflow:hidden;
+}
+
+/* The track moves horizontally; individual slides never shrink or stack. */
+.slides{
+    display:flex;
+    height:100%;
+    transition:transform .6s ease;
+    will-change:transform;
+}
+
+.slide{
+    flex:0 0 100%;
+    min-width:0;
+    height:100%;
+}
+
+/* Each source image fills the responsive hero area without distortion. */
+.slide img{
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* Full-height controls match Amazon's edge navigation placement. */
+.slider-control{
+    position:absolute;
+    top:0;
+    bottom:0;
+    z-index:1;
+    width:clamp(44px, 6vw, 84px);
+    border:0;
+    background:transparent;
+    color:#0f1111;
+    cursor:pointer;
+    font-size:46px;
+}
+
+.slider-control:hover{
+    background-color:rgba(255, 255, 255, .12);
+}
+
+.slider-control:focus-visible{
+    outline:2px solid #ffffff;
+    outline-offset:-4px;
+}
+
+.slider-control--previous{
+    left:0;
+}
+
+.slider-control--next{
+    right:0;
+}
+
+@media (max-width:768px){
+    .hero-slider{
+        height:clamp(180px, 40vw, 320px);
+    }
+
+    .slider-control{
+        font-size:32px;
+    }
+}
