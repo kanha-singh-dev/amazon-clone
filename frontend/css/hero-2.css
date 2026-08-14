@@ -1,0 +1,30 @@
+.hero-2{
+    display: flex;
+    justify-content: space-between;
+    transform: translate(0px, -350px);
+}
+.appliances{
+    width: 371px;
+    height: 421px;
+    background-color: #ffffff;
+    /* margin-top: -50px; */
+    /* transform: translate(0px, -100px); */
+}
+.starting49{
+    width: 371px;
+    height: 421px;
+    background-color: white;
+    /* margin-top: -50px; */
+}
+.starting199{
+    width: 371px;
+    height: 421px;
+    background-color: white;
+    /* margin-top: -50px; */
+}
+.off75{
+    width: 371px;
+    height: 421px;
+    background-color: white;
+    /* margin-top: -50px; */
+}
